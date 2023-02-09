@@ -47,6 +47,5 @@ const parsFormVars = JSON.parse(savedFormVars);
     if (parsFormVars) {
       refs.textarea.value = parsFormVars.email || '';
       refs.input.value = parsFormVars.message || '';
-          
-  }
+            }
 }
