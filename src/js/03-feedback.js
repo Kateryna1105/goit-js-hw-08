@@ -18,13 +18,11 @@ function onInput(evt) {
 
     formData[evt.target.name] = evt.currentTarget.value;
     localStorage.setItem('feedback-form-state', JSON.stringify(formData));
-    console.log(formData[evt.target.name]);
 }
 
 function onTextarea(evt) {
   formData[evt.target.name] = evt.target.value;
   localStorage.setItem('feedback-form-state', JSON.stringify(formData));
-console.log(formData[evt.target.name]);
 }
 
 function onFormSubmit(evt) {
@@ -37,7 +35,9 @@ function onFormSubmit(evt) {
 
     evt.currentTarget.reset();
     localStorage.removeItem('feedback-form-state');
+    const formData = {};
 }
+
 
 function populateForm() {
   

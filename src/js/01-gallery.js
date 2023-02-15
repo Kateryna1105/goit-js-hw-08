@@ -30,8 +30,9 @@ function onClick(evt) {
         return;
     }
 
-    let gallery = new SimpleLightbox('.gallery a');
-    gallery.on('show.simplelightbox', function () {
-    })
+   const gallery = new SimpleLightbox('.gallery a', {
+     captionsData: 'alt',
+     captionDelay: 250,
+   }); 
 };
 
