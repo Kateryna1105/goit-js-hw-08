@@ -27,7 +27,7 @@ function onTextarea(evt) {
 
 function onFormSubmit(evt) {
     evt.preventDefault();
-    console.log('Отправляем форму');
+    // console.log('Отправляем форму');
 
     const savedFormVars = localStorage.getItem('feedback-form-state');
     const parsFormVars = JSON.parse(savedFormVars);
@@ -35,7 +35,8 @@ function onFormSubmit(evt) {
 
     evt.currentTarget.reset();
     localStorage.removeItem('feedback-form-state');
-    const formData = {};
+    formData.email = '';
+    formData.message = '';
 }
 
 

@@ -8,7 +8,6 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 console.log(galleryItems);
 
 const listItem = document.querySelector('.gallery');
-listItem.addEventListener('click', onClick);
 
 const markup = galleryItems.map(({ preview, original, description }) => 
         `<div class="gallery__item">
@@ -24,15 +23,7 @@ const markup = galleryItems.map(({ preview, original, description }) =>
 
 listItem.insertAdjacentHTML('beforeend', markup);
 
-function onClick(evt) {
-    evt.preventDefault();
-    if (evt.target.nodeName !== "IMG") {
-        return;
-    }
-
-   const gallery = new SimpleLightbox('.gallery a', {
-     captionsData: 'alt',
-     captionDelay: 250,
-   }); 
-};
-
+  const gallery = new SimpleLightbox('.gallery a', {
+    captionsData: 'alt',
+    captionDelay: 250,
+  }); 
