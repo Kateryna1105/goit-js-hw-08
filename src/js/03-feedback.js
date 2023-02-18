@@ -46,7 +46,7 @@ const savedFormVars = localStorage.getItem('feedback-form-state');
 const parsFormVars = JSON.parse(savedFormVars);
     
     if (parsFormVars) {
-      refs.textarea.value = parsFormVars.email || '';
-      refs.input.value = parsFormVars.message || '';
+      refs.input.value = parsFormVars.email || '';
+      refs.textarea.value = parsFormVars.message || '';
             }
 }
